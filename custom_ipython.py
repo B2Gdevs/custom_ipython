@@ -50,7 +50,7 @@ def exec_function(user_input):
         compile(user_input, "<stdin>", "eval")
     except SyntaxError:
         return exec
-    
+
     return eval
 
 
@@ -85,9 +85,11 @@ def exec_user_input(i, user_input, user_globals):
 
     return user_globals
 
+
 def exit():
     """Exit the intrepreter."""
     sys.exit()
+
 
 def main():
     """Run the Program."""
@@ -95,6 +97,7 @@ def main():
 
     for i, user_input in get_user_input():
         user_globals = exec_user_input(i, user_input, user_globals)
+
 
 if __name__ == "__main__":
     main()
